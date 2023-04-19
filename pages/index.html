@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bingo Game
+        </title>
+        <link rel="stylesheet" type="text/css" href="../style/style.css">
+    </head>
+    ><body>
+        <center>
+            <h1>Bingo Card Game</h1>
+        </center>
+        <center>
+            <p class="pDrawBall" id="pDrawBall"></p>
+            How Many Bingo Card/s: <input type = "text" id = "txtInput" placeholder = "Enter Numbers Of Cards">
+            <button onclick="draw()"> DRAW CARD</button>
+            <button id="btnDrawBall" onclick="drawBall()"> DRAW BALL </button>
+            <button onclick="clearCards()" > CLEAR</button>
+        </center>
+    </div>
+        <center>
+            <p id="pCount"> No Of Card/s : 0</p>
+        </center><br>
+        <center>
+            <div id="divBingoCard"></div>
+        </center>
+
+        <script src ="../script/BingoCards.js" type="module" ></script>
+        <script src ="../script/BallDraw.js" type="module"></script>
+        <script src ="../script/script.js" type="module"></script>
+    </body>
+</html>
