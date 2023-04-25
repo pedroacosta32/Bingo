@@ -1,5 +1,5 @@
-let divBingoCard = document.getElementById("divBingoCard");
-let txtInput = document.getElementById("txtInput");
+let divBingoCarD = document.getElementById("divBingoCard");
+let txtTxt = document.getElementById("txtInput");
 let pCardCount = document.getElementById("pCount");
 let btnDraw = document.getElementById("btnDraw");
 let counter = 0;
@@ -10,11 +10,22 @@ let cardMatrix;
 let CardLength;
 let BingoWinner = false;
 
+function count(){
+    if (txtInput.value > 0){
+        txtInput.value;
+        document.getElementById('pCount').innerHTML = `No of Cards : ${txtInput.value}`;
+        alert(txtInput.value);
+    }
+    else{
+        alert("nada")
+    }
+}
+
 //the function draw() will draw a number of cards depend on the value given by the user 
 function draw(){
     //condition if the user clicck the draw button
     //without existing values in a field.
-    if( txtInput.value == "" ){
+    if(txtInput.value == "" ){
         alert("Enter Value in  the Field!");
     }
     else{
@@ -26,24 +37,23 @@ function draw(){
         else{
             for( var i = 0; i < txtInput.value; i++) {
                 //create object of BingoCard class
-                card = new BingoCard();
+                let card = new BingoCard();
                 card.generateMatrix();
                 divBingoCard.innerHTML += card.drawCard();
                 counter++;
                 cardMatrix = card.matrix;
-                cardMatrixTotal.push(cardMatrix);      
+                cardMatrixTotal.push(cardMatrix);
             }
             //txtInput field set to null
             txtInput.value = null;
         }
     }
     //Display number of Cards created
-    pCardCount.innerHTML = `No of Cards : ${counter}`;
 }
 
 function drawBall(){
     //create objet of BallDraw class
-    ballDraw = new BallDraw();
+    ballDraw = new ballDraw();
     ballDraw.drawBall();
 
     //Display draw ball
