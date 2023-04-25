@@ -1,5 +1,30 @@
-button.btn {
-    background-color: white;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --light1: #fff;
+    --light2: #aaa;
+    --dark1: #000;
+    --dark2: #333;
+}
+
+body {
+    font-family: manjari;
+    font-size: 20px;
+    background-color: var(--light1);
+    text-align: center;
+    padding: 50px;
+}
+body > h1{
+    background-color: var(--light2);
+    margin-bottom: 15px;
+}
+
+button .btn {
+    background-color: #000;
     border: 5px;
     color: black;
     padding: 14px 45px;
@@ -8,7 +33,7 @@ button.btn {
     transition: .3;
 }
 
-button#btndraw {
+button #btndraw {
     position: fixed;
     top: 8%;
     left: 7%;
@@ -32,14 +57,14 @@ table, th, td, tr {
     text-align: center;
 }
 
-td.datanumber {
+td .datanumber {
     background-color: white;
     font-family: fantasy;
     font-size: 40px;
     padding: 2px;
 }
 
-td.ball-data {
+td .ball-data {
     background-color: white;
     font-family: fantasy;
     font-size: 40px;
@@ -53,19 +78,13 @@ input {
     padding: 8px 15px;
 }
 
-body {
-    font-family: manjari;
-    font-size: 20px;
-    background-color: lightgrey;
-}
-
 h1#title {
     font-size: 100px;
     text-align: center;
     height: 15px;
 }
 
-table#table-balls {
+table #table-balls {
     background-color: white;
     /*position: absolute;
     top: 2%;*/
@@ -77,14 +96,12 @@ table#table-balls {
 button:hover {
     background-color: gray;
     color: #ffff99;
-    border-bottom: 3px solid white;
     cursor: pointer;
 }
 
 button {
     border: none;
     border-radius: 4px;
-    width: 10px;
     padding: 10px 20px;
 }
 
